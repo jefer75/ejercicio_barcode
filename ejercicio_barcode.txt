@@ -1,0 +1,70 @@
+-- phpMyAdmin SQL Dump
+-- version 4.8.5
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 13-03-2024 a las 17:53:05
+-- Versión del servidor: 10.1.38-MariaDB
+-- Versión de PHP: 7.3.2
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `ejercicio_barcode`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `articulos`
+--
+
+CREATE TABLE `articulos` (
+  `id_art` int(11) NOT NULL,
+  `barcode` varchar(200) NOT NULL,
+  `nombre` varchar(40) NOT NULL,
+  `precio` decimal(10,0) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `articulos`
+--
+
+INSERT INTO `articulos` (`id_art`, `barcode`, `nombre`, `precio`) VALUES
+(1, '', 'televisores', '1200000'),
+(2, '', 'equipo', '900000'),
+(4, '', 'nevera', '2000000');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `articulos`
+--
+ALTER TABLE `articulos`
+  ADD PRIMARY KEY (`id_art`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `articulos`
+--
+ALTER TABLE `articulos`
+  MODIFY `id_art` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
